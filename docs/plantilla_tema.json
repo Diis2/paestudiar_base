@@ -1,0 +1,31 @@
+{
+  "id": "eje-tema",
+  "title": "Título del tema",
+  "summary": "Resumen corto (una línea).",
+  "order": 99,
+  "module": "M1",
+  "lesson": [
+    "Primer párrafo de teoría con una fórmula en línea $a^2+b^2=c^2$.",
+    "Segundo párrafo. Puedes usar **negrita**."
+  ],
+  "formulas": [
+    { "name": "Nombre de la fórmula", "latex": "a^2+b^2=c^2", "note": "Condición opcional." }
+  ],
+  "examples": [
+    { "statement": "Enunciado del ejemplo.", "solution": "Solución paso a paso con $$fórmula centrada.$$" }
+  ],
+  "commonMistakes": [
+    "Error frecuente 1.",
+    "Error frecuente 2."
+  ],
+  "questions": [
+    {
+      "id": "eje-tema-001",
+      "statement": "Enunciado de la pregunta.",
+      "options": ["Alternativa A", "Alternativa B", "Alternativa C", "Alternativa D"],
+      "correctIndex": 0,
+      "explanation": "Explicación del procedimiento.",
+      "difficulty": "BASICO"
+    }
+  ]
+}

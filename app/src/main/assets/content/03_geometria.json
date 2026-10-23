@@ -1,0 +1,233 @@
+{
+  "axis": {
+    "id": "geometria",
+    "name": "Geometría",
+    "order": 3,
+    "description": "Áreas, volúmenes, Pitágoras y semejanza."
+  },
+  "topics": [
+    {
+      "id": "geo-areas",
+      "order": 1,
+      "module": "M1",
+      "title": "Perímetros, áreas y volúmenes",
+      "summary": "Fórmulas de figuras planas y cuerpos geométricos.",
+      "lesson": [
+        "El **perímetro** es la longitud del contorno de una figura; el **área** mide su superficie y se expresa en unidades cuadradas ($\\text{cm}^2$). El **volumen** mide el espacio de un cuerpo y se expresa en unidades cúbicas ($\\text{cm}^3$).",
+        "Para los **prismas y cilindros**, el volumen es el área de la base por la altura. Para **pirámides y conos**, es un tercio de ese valor.",
+        "Antes de aplicar una fórmula, comprueba que todas las medidas estén en la misma unidad."
+      ],
+      "formulas": [
+        {
+          "name": "Triángulo",
+          "latex": "A=\\frac{b\\cdot h}{2}"
+        },
+        {
+          "name": "Paralelogramo",
+          "latex": "A=b\\cdot h"
+        },
+        {
+          "name": "Trapecio",
+          "latex": "A=\\frac{(B+b)\\cdot h}{2}"
+        },
+        {
+          "name": "Rombo",
+          "latex": "A=\\frac{d_1\\cdot d_2}{2}"
+        },
+        {
+          "name": "Círculo: área y perímetro",
+          "latex": "A=\\pi r^2,\\qquad P=2\\pi r"
+        },
+        {
+          "name": "Prisma",
+          "latex": "V=A_{\\text{base}}\\cdot h"
+        },
+        {
+          "name": "Cilindro: volumen y área total",
+          "latex": "V=\\pi r^2h,\\qquad A_T=2\\pi r(r+h)"
+        },
+        {
+          "name": "Cono",
+          "latex": "V=\\frac{1}{3}\\pi r^2h,\\qquad A_T=\\pi r(r+g),\\quad g=\\sqrt{r^2+h^2}"
+        },
+        {
+          "name": "Pirámide",
+          "latex": "V=\\frac{1}{3}\\,A_{\\text{base}}\\cdot h"
+        },
+        {
+          "name": "Esfera: volumen y área",
+          "latex": "V=\\frac{4}{3}\\pi r^3,\\qquad A=4\\pi r^2"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Calcula el volumen de un cilindro de radio 3 cm y altura 10 cm.",
+          "solution": "$$V=\\pi r^2h=\\pi\\cdot3^2\\cdot10=90\\pi\\ \\text{cm}^3.$$"
+        }
+      ],
+      "commonMistakes": [
+        "Olvidar dividir por 2 en el área del triángulo o del trapecio.",
+        "Usar el diámetro en lugar del radio en las fórmulas del círculo y la esfera.",
+        "Olvidar el factor $\\frac{1}{3}$ en el volumen de conos y pirámides."
+      ],
+      "questions": [
+        {
+          "id": "geo-area-001",
+          "statement": "Un trapecio tiene bases de 10 cm y 6 cm, y una altura de 4 cm. ¿Cuál es su área?",
+          "options": [
+            "24 cm²",
+            "32 cm²",
+            "40 cm²",
+            "64 cm²"
+          ],
+          "correctIndex": 1,
+          "explanation": "$A=\\frac{(10+6)\\cdot4}{2}=\\frac{64}{2}=32\\ \\text{cm}^2$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "geo-area-002",
+          "statement": "¿Cuál es el área de un círculo de radio 5 cm?",
+          "options": [
+            "$10\\pi$ cm²",
+            "$25\\pi$ cm²",
+            "$50\\pi$ cm²",
+            "$100\\pi$ cm²"
+          ],
+          "correctIndex": 1,
+          "explanation": "$A=\\pi r^2=\\pi\\cdot5^2=25\\pi\\ \\text{cm}^2$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "geo-area-003",
+          "statement": "El volumen de un cilindro de radio 2 cm y altura 5 cm es:",
+          "options": [
+            "$10\\pi$ cm³",
+            "$40\\pi$ cm³",
+            "$20\\pi$ cm³",
+            "$100\\pi$ cm³"
+          ],
+          "correctIndex": 2,
+          "explanation": "$V=\\pi r^2h=\\pi\\cdot2^2\\cdot5=20\\pi\\ \\text{cm}^3$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "geo-area-004",
+          "statement": "¿Cuál es el volumen de una esfera de radio 3 cm?",
+          "options": [
+            "$12\\pi$ cm³",
+            "$27\\pi$ cm³",
+            "$108\\pi$ cm³",
+            "$36\\pi$ cm³"
+          ],
+          "correctIndex": 3,
+          "explanation": "$V=\\frac{4}{3}\\pi r^3=\\frac{4}{3}\\pi\\cdot27=36\\pi\\ \\text{cm}^3$.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    },
+    {
+      "id": "geo-pitagoras",
+      "order": 2,
+      "module": "M1",
+      "title": "Pitágoras y semejanza",
+      "summary": "Teorema de Pitágoras, Thales y razones de semejanza.",
+      "lesson": [
+        "En un **triángulo rectángulo**, el cuadrado de la hipotenusa $c$ es igual a la suma de los cuadrados de los catetos $a$ y $b$.",
+        "Dos figuras son **semejantes** si tienen la misma forma: sus ángulos correspondientes son iguales y sus lados correspondientes son proporcionales, con una razón de semejanza $k$.",
+        "Si la razón entre longitudes es $k$, entonces la razón entre **áreas** es $k^2$ y entre **volúmenes** es $k^3$.",
+        "El **teorema de Thales** dice que rectas paralelas cortadas por dos transversales determinan segmentos proporcionales."
+      ],
+      "formulas": [
+        {
+          "name": "Teorema de Pitágoras",
+          "latex": "a^2+b^2=c^2"
+        },
+        {
+          "name": "Diagonal de un cuadrado de lado a",
+          "latex": "d=a\\sqrt{2}"
+        },
+        {
+          "name": "Altura de un triángulo equilátero de lado a",
+          "latex": "h=\\frac{a\\sqrt{3}}{2}"
+        },
+        {
+          "name": "Thales (en un triángulo, con DE paralela a BC)",
+          "latex": "\\frac{AD}{DB}=\\frac{AE}{EC}\\qquad\\text{y}\\qquad\\frac{AD}{AB}=\\frac{DE}{BC}"
+        },
+        {
+          "name": "Razón de áreas y de volúmenes",
+          "latex": "\\frac{A_1}{A_2}=k^2,\\qquad\\frac{V_1}{V_2}=k^3"
+        },
+        {
+          "name": "Ternas pitagóricas frecuentes",
+          "latex": "(3,4,5),\\ (5,12,13),\\ (8,15,17)"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Una escalera de 5 m se apoya en una pared con su base a 3 m de ella. ¿A qué altura llega?",
+          "solution": "La escalera es la hipotenusa: $h^2+3^2=5^2$, luego $h^2=25-9=16$ y $h=4$ m."
+        }
+      ],
+      "commonMistakes": [
+        "Aplicar Pitágoras a triángulos que no son rectángulos.",
+        "Sumar los catetos en lugar de sumar sus cuadrados: $a+b\\neq c$.",
+        "Usar la razón de semejanza $k$ directamente para áreas en vez de $k^2$."
+      ],
+      "questions": [
+        {
+          "id": "geo-pit-001",
+          "statement": "Los catetos de un triángulo rectángulo miden 6 cm y 8 cm. ¿Cuánto mide la hipotenusa?",
+          "options": [
+            "7 cm",
+            "10 cm",
+            "12 cm",
+            "14 cm"
+          ],
+          "correctIndex": 1,
+          "explanation": "$c=\\sqrt{6^2+8^2}=\\sqrt{36+64}=\\sqrt{100}=10$ cm.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "geo-pit-002",
+          "statement": "En un triángulo rectángulo la hipotenusa mide 13 cm y un cateto mide 5 cm. ¿Cuánto mide el otro cateto?",
+          "options": [
+            "8 cm",
+            "10 cm",
+            "12 cm",
+            "18 cm"
+          ],
+          "correctIndex": 2,
+          "explanation": "$b=\\sqrt{13^2-5^2}=\\sqrt{169-25}=\\sqrt{144}=12$ cm.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "geo-pit-003",
+          "statement": "Dos triángulos son semejantes y dos lados correspondientes miden 4 cm y 6 cm. Si el área del triángulo menor es 20 cm², ¿cuál es el área del mayor?",
+          "options": [
+            "30 cm²",
+            "40 cm²",
+            "45 cm²",
+            "60 cm²"
+          ],
+          "correctIndex": 2,
+          "explanation": "La razón de semejanza es $k=\\frac{6}{4}=\\frac{3}{2}$, y la razón de áreas es $k^2=\\frac{9}{4}$. Entonces $20\\cdot\\frac{9}{4}=45\\ \\text{cm}^2$.",
+          "difficulty": "INTERMEDIO"
+        },
+        {
+          "id": "geo-pit-004",
+          "statement": "¿Cuánto mide la diagonal de un cuadrado de lado 6 cm?",
+          "options": [
+            "$6\\sqrt{2}$ cm",
+            "$6$ cm",
+            "$12$ cm",
+            "$6\\sqrt{3}$ cm"
+          ],
+          "correctIndex": 0,
+          "explanation": "$d=\\sqrt{6^2+6^2}=\\sqrt{72}=6\\sqrt{2}$ cm.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    }
+  ]
+}

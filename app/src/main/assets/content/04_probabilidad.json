@@ -1,0 +1,216 @@
+{
+  "axis": {
+    "id": "probabilidad",
+    "name": "Probabilidad y estadística",
+    "order": 4,
+    "description": "Datos, medidas estadísticas, probabilidad y conteo."
+  },
+  "topics": [
+    {
+      "id": "est-medidas",
+      "order": 1,
+      "module": "M1",
+      "title": "Tendencia central y dispersión",
+      "summary": "Media, mediana, moda, rango y desviación estándar.",
+      "lesson": [
+        "La **media** (promedio) es la suma de los datos dividida por la cantidad de datos. Es sensible a valores extremos.",
+        "La **mediana** es el valor central de los datos **ordenados**; si hay una cantidad par de datos, es el promedio de los dos centrales.",
+        "La **moda** es el dato que más se repite. Puede haber más de una moda o ninguna.",
+        "El **rango** y la **desviación estándar** miden cuán dispersos están los datos respecto del centro."
+      ],
+      "formulas": [
+        {
+          "name": "Media aritmética",
+          "latex": "\\bar{x}=\\frac{x_1+x_2+\\cdots+x_n}{n}"
+        },
+        {
+          "name": "Media con frecuencias",
+          "latex": "\\bar{x}=\\frac{\\sum f_i\\,x_i}{\\sum f_i}"
+        },
+        {
+          "name": "Rango",
+          "latex": "R=x_{\\max}-x_{\\min}"
+        },
+        {
+          "name": "Varianza (poblacional)",
+          "latex": "\\sigma^2=\\frac{\\sum (x_i-\\bar{x})^2}{n}"
+        },
+        {
+          "name": "Desviación estándar",
+          "latex": "\\sigma=\\sqrt{\\sigma^2}"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Para los datos 3, 5, 5, 6, 9, calcula media, mediana, moda y rango.",
+          "solution": "Media: $\\frac{3+5+5+6+9}{5}=\\frac{28}{5}=5{,}6$. Mediana: 5. Moda: 5. Rango: $9-3=6$."
+        }
+      ],
+      "commonMistakes": [
+        "Calcular la mediana sin ordenar los datos primero.",
+        "Al agregar un dato, calcular el nuevo promedio sin volver a dividir por la nueva cantidad de datos."
+      ],
+      "questions": [
+        {
+          "id": "est-med-001",
+          "statement": "¿Cuál es la media aritmética de los datos 4, 8, 6, 10 y 12?",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "10"
+          ],
+          "correctIndex": 2,
+          "explanation": "$\\frac{4+8+6+10+12}{5}=\\frac{40}{5}=8$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "est-med-002",
+          "statement": "¿Cuál es la mediana de los datos 7, 3, 9, 5, 12 y 4?",
+          "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "correctIndex": 1,
+          "explanation": "Ordenados: 3, 4, 5, 7, 9, 12. Hay seis datos, así que la mediana es el promedio de los centrales: $\\frac{5+7}{2}=6$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "est-med-003",
+          "statement": "¿Cuál es la moda de los datos 2, 3, 3, 5, 5, 5, 7?",
+          "options": [
+            "5",
+            "3",
+            "4",
+            "7"
+          ],
+          "correctIndex": 0,
+          "explanation": "El 5 aparece tres veces, más que cualquier otro dato.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "est-med-004",
+          "statement": "El promedio de las 4 primeras notas de un estudiante es 5,0. Si la quinta nota es 7,0, ¿cuál es el nuevo promedio?",
+          "options": [
+            "5,2",
+            "5,5",
+            "6,0",
+            "5,4"
+          ],
+          "correctIndex": 3,
+          "explanation": "La suma de las 4 primeras notas es $4\\cdot5{,}0=20$. Con la quinta: $\\frac{20+7}{5}=\\frac{27}{5}=5{,}4$.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    },
+    {
+      "id": "est-probabilidad",
+      "order": 2,
+      "module": "M1",
+      "title": "Probabilidad y conteo",
+      "summary": "Regla de Laplace, eventos, probabilidad condicional y combinatoria.",
+      "lesson": [
+        "Si todos los resultados son igualmente probables, la **probabilidad** de un suceso es la razón entre los casos favorables y los casos posibles (**regla de Laplace**). Siempre está entre 0 y 1.",
+        "Dos sucesos son **independientes** si la ocurrencia de uno no afecta la probabilidad del otro. En las extracciones **sin reposición**, la probabilidad cambia en cada paso.",
+        "Para contar casos se usa el **principio multiplicativo**, las **permutaciones** (importa el orden) y las **combinaciones** (no importa el orden)."
+      ],
+      "formulas": [
+        {
+          "name": "Regla de Laplace",
+          "latex": "P(A)=\\frac{\\text{casos favorables}}{\\text{casos posibles}}"
+        },
+        {
+          "name": "Complemento",
+          "latex": "P(A^c)=1-P(A)"
+        },
+        {
+          "name": "Unión de sucesos",
+          "latex": "P(A\\cup B)=P(A)+P(B)-P(A\\cap B)"
+        },
+        {
+          "name": "Sucesos independientes",
+          "latex": "P(A\\cap B)=P(A)\\cdot P(B)"
+        },
+        {
+          "name": "Probabilidad condicional",
+          "latex": "P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)}",
+          "note": "Con $P(B)>0$."
+        },
+        {
+          "name": "Factorial y permutaciones",
+          "latex": "n!=n(n-1)\\cdots2\\cdot1,\\qquad P(n,k)=\\frac{n!}{(n-k)!}"
+        },
+        {
+          "name": "Combinaciones",
+          "latex": "\\binom{n}{k}=\\frac{n!}{k!\\,(n-k)!}"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Una bolsa tiene 3 bolas rojas y 2 azules. ¿Cuál es la probabilidad de sacar una bola roja?",
+          "solution": "Hay 3 casos favorables de 5 posibles: $P(\\text{roja})=\\frac{3}{5}=0{,}6$."
+        }
+      ],
+      "commonMistakes": [
+        "Usar la misma probabilidad en cada paso cuando la extracción es sin reposición.",
+        "Confundir permutaciones (importa el orden) con combinaciones (no importa)."
+      ],
+      "questions": [
+        {
+          "id": "est-prob-001",
+          "statement": "Se lanza un dado común de seis caras. ¿Cuál es la probabilidad de obtener un número par mayor que 2?",
+          "options": [
+            "$\\frac{1}{6}$",
+            "$\\frac{1}{3}$",
+            "$\\frac{1}{2}$",
+            "$\\frac{2}{3}$"
+          ],
+          "correctIndex": 1,
+          "explanation": "Los resultados favorables son 4 y 6, es decir, 2 casos de 6: $\\frac{2}{6}=\\frac{1}{3}$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "est-prob-002",
+          "statement": "Se lanzan dos monedas. ¿Cuál es la probabilidad de obtener exactamente una cara?",
+          "options": [
+            "$\\frac{1}{4}$",
+            "$\\frac{1}{3}$",
+            "$\\frac{1}{2}$",
+            "$\\frac{3}{4}$"
+          ],
+          "correctIndex": 2,
+          "explanation": "Los casos posibles son CC, CS, SC y SS. Favorables: CS y SC, es decir, $\\frac{2}{4}=\\frac{1}{2}$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "est-prob-003",
+          "statement": "¿De cuántas maneras se puede elegir un comité de 3 personas entre 5 candidatos?",
+          "options": [
+            "6",
+            "15",
+            "60",
+            "10"
+          ],
+          "correctIndex": 3,
+          "explanation": "El orden no importa: $\\binom{5}{3}=\\frac{5!}{3!\\,2!}=\\frac{5\\cdot4}{2}=10$.",
+          "difficulty": "INTERMEDIO"
+        },
+        {
+          "id": "est-prob-004",
+          "statement": "Una urna tiene 4 bolas rojas y 6 azules. Se extraen dos bolas sin reposición. ¿Cuál es la probabilidad de que ambas sean rojas?",
+          "options": [
+            "$\\frac{4}{25}$",
+            "$\\frac{2}{15}$",
+            "$\\frac{1}{5}$",
+            "$\\frac{3}{10}$"
+          ],
+          "correctIndex": 1,
+          "explanation": "En la primera extracción la probabilidad es $\\frac{4}{10}$ y en la segunda $\\frac{3}{9}$. Entonces $\\frac{4}{10}\\cdot\\frac{3}{9}=\\frac{12}{90}=\\frac{2}{15}$.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    }
+  ]
+}

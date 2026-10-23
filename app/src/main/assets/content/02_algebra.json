@@ -1,0 +1,415 @@
+{
+  "axis": {
+    "id": "algebra",
+    "name": "Álgebra y funciones",
+    "order": 2,
+    "description": "Expresiones algebraicas, ecuaciones y funciones."
+  },
+  "topics": [
+    {
+      "id": "alg-productos",
+      "order": 1,
+      "module": "M1",
+      "title": "Productos notables y factorización",
+      "summary": "Desarrollo y factorización de expresiones algebraicas.",
+      "lesson": [
+        "Los **productos notables** son multiplicaciones de binomios que se resuelven con una fórmula. Reconocerlos permite desarrollar y también **factorizar** rápidamente.",
+        "Factorizar es escribir una expresión como producto. Primero se busca un **factor común**; luego se intenta reconocer una diferencia de cuadrados, un cuadrado perfecto o un trinomio de la forma $x^2+bx+c$.",
+        "Para factorizar $x^2+bx+c$ se buscan dos números cuya **suma** sea $b$ y cuyo **producto** sea $c$."
+      ],
+      "formulas": [
+        {
+          "name": "Cuadrado de binomio (suma)",
+          "latex": "(a+b)^2=a^2+2ab+b^2"
+        },
+        {
+          "name": "Cuadrado de binomio (resta)",
+          "latex": "(a-b)^2=a^2-2ab+b^2"
+        },
+        {
+          "name": "Suma por diferencia",
+          "latex": "(a+b)(a-b)=a^2-b^2"
+        },
+        {
+          "name": "Binomios con término común",
+          "latex": "(x+a)(x+b)=x^2+(a+b)x+ab"
+        },
+        {
+          "name": "Factor común",
+          "latex": "ab+ac=a(b+c)"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Factoriza $x^2-5x+6$.",
+          "solution": "Se buscan dos números que sumen $-5$ y multipliquen $6$: son $-2$ y $-3$. Entonces $$x^2-5x+6=(x-2)(x-3).$$"
+        }
+      ],
+      "commonMistakes": [
+        "Olvidar el término central: $(a+b)^2\\neq a^2+b^2$.",
+        "Cambiar el signo de los números al factorizar un trinomio (la suma debe dar el coeficiente de $x$, con su signo)."
+      ],
+      "questions": [
+        {
+          "id": "alg-prod-001",
+          "statement": "Al desarrollar $(2x+3)^2$ se obtiene:",
+          "options": [
+            "$4x^2+9$",
+            "$4x^2+6x+9$",
+            "$4x^2+12x+9$",
+            "$2x^2+12x+9$"
+          ],
+          "correctIndex": 2,
+          "explanation": "$(2x+3)^2=(2x)^2+2\\cdot2x\\cdot3+3^2=4x^2+12x+9$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "alg-prod-002",
+          "statement": "La factorización de $x^2-49$ es:",
+          "options": [
+            "$(x-7)^2$",
+            "$(x-49)(x+1)$",
+            "$(x+7)^2$",
+            "$(x-7)(x+7)$"
+          ],
+          "correctIndex": 3,
+          "explanation": "Es una diferencia de cuadrados: $x^2-7^2=(x-7)(x+7)$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "alg-prod-003",
+          "statement": "¿Cuál es la factorización de $x^2+7x+12$?",
+          "options": [
+            "$(x+2)(x+6)$",
+            "$(x+3)(x+4)$",
+            "$(x+1)(x+12)$",
+            "$(x-3)(x-4)$"
+          ],
+          "correctIndex": 1,
+          "explanation": "Se buscan dos números que sumen 7 y multipliquen 12: son 3 y 4. Entonces $x^2+7x+12=(x+3)(x+4)$.",
+          "difficulty": "INTERMEDIO"
+        },
+        {
+          "id": "alg-prod-004",
+          "statement": "El valor de $101^2-99^2$ es:",
+          "options": [
+            "4",
+            "200",
+            "400",
+            "2.000"
+          ],
+          "correctIndex": 2,
+          "explanation": "Por suma por diferencia: $101^2-99^2=(101+99)(101-99)=200\\cdot2=400$.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    },
+    {
+      "id": "alg-ecuaciones",
+      "order": 2,
+      "module": "M1",
+      "title": "Ecuaciones e inecuaciones lineales",
+      "summary": "Resolver ecuaciones, inecuaciones e intervalos, y plantear problemas.",
+      "lesson": [
+        "Una **ecuación lineal** se resuelve aislando la incógnita con operaciones inversas, haciendo lo mismo en ambos lados de la igualdad.",
+        "En una **inecuación**, al multiplicar o dividir por un número **negativo** el sentido de la desigualdad se invierte.",
+        "La solución de una inecuación se expresa como **intervalo**. Un corchete incluye el extremo y un paréntesis lo excluye.",
+        "Para **plantear problemas**: define la incógnita, traduce el enunciado a una ecuación, resuélvela y verifica que la respuesta tenga sentido."
+      ],
+      "formulas": [
+        {
+          "name": "Ecuación lineal",
+          "latex": "ax+b=c\\;\\Rightarrow\\;x=\\frac{c-b}{a}",
+          "note": "Con $a\\neq0$."
+        },
+        {
+          "name": "Inversión de la desigualdad",
+          "latex": "a<b\\;\\text{ y }\\;c<0\\;\\Rightarrow\\;ac>bc"
+        },
+        {
+          "name": "Intervalos",
+          "latex": "x\\ge a\\iff x\\in[a,+\\infty)\\qquad x<b\\iff x\\in(-\\infty,b)"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Resuelve $-3x+4>13$.",
+          "solution": "Se resta 4: $-3x>9$. Al dividir por $-3$ se invierte el sentido: $x<-3$. La solución es el intervalo $(-\\infty,-3)$."
+        }
+      ],
+      "commonMistakes": [
+        "No invertir el sentido de la desigualdad al dividir por un número negativo.",
+        "Confundir el extremo cerrado (incluido) con el abierto (excluido) al escribir el intervalo."
+      ],
+      "questions": [
+        {
+          "id": "alg-ec-001",
+          "statement": "Al resolver $3(x-2)=2x+5$, el valor de $x$ es:",
+          "options": [
+            "1",
+            "3",
+            "7",
+            "11"
+          ],
+          "correctIndex": 3,
+          "explanation": "$3x-6=2x+5\\Rightarrow x=11$. Comprobación: $3\\cdot9=27$ y $2\\cdot11+5=27$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "alg-ec-002",
+          "statement": "Si $\\frac{x}{2}+\\frac{x}{3}=10$, entonces $x$ vale:",
+          "options": [
+            "6",
+            "10",
+            "12",
+            "15"
+          ],
+          "correctIndex": 2,
+          "explanation": "Se multiplica por 6: $3x+2x=60$, luego $5x=60$ y $x=12$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "alg-ec-003",
+          "statement": "El conjunto solución de $-2x+1\\le9$ es:",
+          "options": [
+            "$(-\\infty,-4]$",
+            "$[-4,+\\infty)$",
+            "$(-\\infty,4]$",
+            "$[4,+\\infty)$"
+          ],
+          "correctIndex": 1,
+          "explanation": "$-2x\\le8$. Al dividir por $-2$ se invierte el sentido: $x\\ge-4$, es decir, $[-4,+\\infty)$.",
+          "difficulty": "INTERMEDIO"
+        },
+        {
+          "id": "alg-ec-004",
+          "statement": "La suma de tres números enteros consecutivos es 78. ¿Cuál es el mayor?",
+          "options": [
+            "25",
+            "26",
+            "27",
+            "28"
+          ],
+          "correctIndex": 2,
+          "explanation": "Si los números son $n$, $n+1$ y $n+2$: $3n+3=78$, luego $n=25$. Los números son 25, 26 y 27; el mayor es 27.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    },
+    {
+      "id": "alg-lineal",
+      "order": 3,
+      "module": "M1",
+      "title": "Función lineal y afín",
+      "summary": "Pendiente, intercepto, ceros, rectas paralelas y perpendiculares.",
+      "lesson": [
+        "La **función lineal** es $f(x)=mx$ y su gráfica pasa por el origen. La **función afín** es $f(x)=mx+n$.",
+        "La **pendiente** $m$ indica cuánto cambia $y$ por cada unidad que aumenta $x$. El número $n$ es el **intercepto** con el eje $Y$, en el punto $(0,n)$.",
+        "El **cero** de la función es el valor de $x$ para el cual $f(x)=0$ (intersección con el eje $X$).",
+        "Dos rectas son paralelas si tienen la misma pendiente y perpendiculares si el producto de sus pendientes es $-1$."
+      ],
+      "formulas": [
+        {
+          "name": "Función afín",
+          "latex": "f(x)=mx+n"
+        },
+        {
+          "name": "Pendiente entre dos puntos",
+          "latex": "m=\\frac{y_2-y_1}{x_2-x_1}",
+          "note": "Con $x_1\\neq x_2$."
+        },
+        {
+          "name": "Ecuación punto-pendiente",
+          "latex": "y-y_1=m(x-x_1)"
+        },
+        {
+          "name": "Cero de la función",
+          "latex": "x=-\\frac{n}{m}",
+          "note": "Con $m\\neq0$."
+        },
+        {
+          "name": "Rectas paralelas",
+          "latex": "m_1=m_2"
+        },
+        {
+          "name": "Rectas perpendiculares",
+          "latex": "m_1\\cdot m_2=-1"
+        },
+        {
+          "name": "Distancia entre dos puntos",
+          "latex": "d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}"
+        },
+        {
+          "name": "Punto medio",
+          "latex": "M=\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Encuentra la ecuación de la recta que pasa por $(1,3)$ y $(3,7)$.",
+          "solution": "La pendiente es $m=\\frac{7-3}{3-1}=2$. Con punto-pendiente: $y-3=2(x-1)$, es decir, $$y=2x+1.$$"
+        }
+      ],
+      "commonMistakes": [
+        "Invertir el orden de los puntos solo en el numerador o solo en el denominador al calcular la pendiente.",
+        "Confundir pendiente perpendicular con el inverso sin cambiar el signo: la perpendicular de $m$ es $-\\frac{1}{m}$."
+      ],
+      "questions": [
+        {
+          "id": "alg-lin-001",
+          "statement": "¿Cuál es la pendiente de la recta que pasa por $(2,1)$ y $(6,9)$?",
+          "options": [
+            "$\\frac{1}{2}$",
+            "$2$",
+            "$4$",
+            "$8$"
+          ],
+          "correctIndex": 1,
+          "explanation": "$m=\\frac{9-1}{6-2}=\\frac{8}{4}=2$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "alg-lin-002",
+          "statement": "¿Cuál es el cero de la función $f(x)=-3x+5$?",
+          "options": [
+            "$-\\frac{5}{3}$",
+            "$\\frac{3}{5}$",
+            "$\\frac{5}{3}$",
+            "$5$"
+          ],
+          "correctIndex": 2,
+          "explanation": "Se resuelve $-3x+5=0$: $x=\\frac{5}{3}$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "alg-lin-003",
+          "statement": "Un taxi cobra 800 pesos de bajada de bandera y 300 pesos por cada kilómetro recorrido. ¿Cuánto cuesta un viaje de 7 km?",
+          "options": [
+            "2.100 pesos",
+            "2.900 pesos",
+            "3.100 pesos",
+            "7.700 pesos"
+          ],
+          "correctIndex": 1,
+          "explanation": "La función de costo es $C(x)=300x+800$. Entonces $C(7)=2.100+800=2.900$ pesos.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "alg-lin-004",
+          "statement": "Una recta tiene ecuación $y=2x+1$. ¿Cuál es la pendiente de una recta perpendicular a ella?",
+          "options": [
+            "$2$",
+            "$-2$",
+            "$\\frac{1}{2}$",
+            "$-\\frac{1}{2}$"
+          ],
+          "correctIndex": 3,
+          "explanation": "Debe cumplirse $m_1\\cdot m_2=-1$. Como $m_1=2$, entonces $m_2=-\\frac{1}{2}$.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    },
+    {
+      "id": "alg-cuadratica",
+      "order": 4,
+      "module": "M1",
+      "title": "Función cuadrática",
+      "summary": "Parábola, vértice, discriminante y ecuación de segundo grado.",
+      "lesson": [
+        "La **función cuadrática** es $f(x)=ax^2+bx+c$ con $a\\neq0$. Su gráfica es una **parábola**: se abre hacia arriba si $a>0$ y hacia abajo si $a<0$.",
+        "Los **ceros** son las soluciones de $ax^2+bx+c=0$. El **discriminante** $\\Delta=b^2-4ac$ indica cuántas soluciones reales hay.",
+        "El **vértice** es el punto máximo (si $a<0$) o mínimo (si $a>0$) de la parábola."
+      ],
+      "formulas": [
+        {
+          "name": "Función cuadrática",
+          "latex": "f(x)=ax^2+bx+c,\\quad a\\neq0"
+        },
+        {
+          "name": "Discriminante",
+          "latex": "\\Delta=b^2-4ac"
+        },
+        {
+          "name": "Fórmula general",
+          "latex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}"
+        },
+        {
+          "name": "Vértice",
+          "latex": "x_v=-\\frac{b}{2a},\\qquad y_v=f(x_v)"
+        },
+        {
+          "name": "Suma y producto de raíces",
+          "latex": "x_1+x_2=-\\frac{b}{a},\\qquad x_1\\cdot x_2=\\frac{c}{a}"
+        },
+        {
+          "name": "Forma factorizada",
+          "latex": "f(x)=a(x-x_1)(x-x_2)"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Resuelve $x^2-4x-5=0$.",
+          "solution": "$\\Delta=(-4)^2-4\\cdot1\\cdot(-5)=16+20=36$. Entonces $$x=\\frac{4\\pm6}{2},$$ es decir, $x=5$ o $x=-1$."
+        }
+      ],
+      "commonMistakes": [
+        "Olvidar el signo de $b$ en la fórmula general: el numerador empieza con $-b$.",
+        "Escribir $x_v=\\frac{b}{2a}$ sin el signo negativo."
+      ],
+      "questions": [
+        {
+          "id": "alg-cuad-001",
+          "statement": "Las soluciones de $x^2-5x+6=0$ son:",
+          "options": [
+            "$x=1$ y $x=6$",
+            "$x=-2$ y $x=-3$",
+            "$x=2$ y $x=3$",
+            "$x=-1$ y $x=-6$"
+          ],
+          "correctIndex": 2,
+          "explanation": "$\\Delta=25-24=1$ y $x=\\frac{5\\pm1}{2}$, luego $x=3$ o $x=2$. También: dos números que suman 5 y multiplican 6.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "alg-cuad-002",
+          "statement": "¿Cuáles son las coordenadas del vértice de $f(x)=x^2-6x+5$?",
+          "options": [
+            "$(3,-4)$",
+            "$(-3,-4)$",
+            "$(3,4)$",
+            "$(6,5)$"
+          ],
+          "correctIndex": 0,
+          "explanation": "$x_v=-\\frac{-6}{2\\cdot1}=3$ y $y_v=f(3)=9-18+5=-4$. El vértice es $(3,-4)$.",
+          "difficulty": "INTERMEDIO"
+        },
+        {
+          "id": "alg-cuad-003",
+          "statement": "¿Cuántas soluciones reales tiene $2x^2+3x+5=0$?",
+          "options": [
+            "Una",
+            "Dos",
+            "Infinitas",
+            "Ninguna"
+          ],
+          "correctIndex": 3,
+          "explanation": "$\\Delta=3^2-4\\cdot2\\cdot5=9-40=-31<0$. Como el discriminante es negativo, no hay soluciones reales.",
+          "difficulty": "INTERMEDIO"
+        },
+        {
+          "id": "alg-cuad-004",
+          "statement": "La altura (en metros) de un proyectil está dada por $h(t)=-5t^2+20t$, con $t$ en segundos. ¿Cuál es la altura máxima?",
+          "options": [
+            "10 m",
+            "15 m",
+            "20 m",
+            "40 m"
+          ],
+          "correctIndex": 2,
+          "explanation": "El máximo está en el vértice: $t_v=-\\frac{20}{2\\cdot(-5)}=2$ s. Entonces $h(2)=-5\\cdot4+20\\cdot2=-20+40=20$ m.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    }
+  ]
+}

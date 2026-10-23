@@ -1,0 +1,330 @@
+{
+  "axis": {
+    "id": "numeros",
+    "name": "Números",
+    "order": 1,
+    "description": "Operatoria, porcentaje, potencias y raíces."
+  },
+  "topics": [
+    {
+      "id": "num-fracciones",
+      "order": 1,
+      "module": "M1",
+      "title": "Fracciones y decimales",
+      "summary": "Operaciones con fracciones, comparación y paso a decimal.",
+      "lesson": [
+        "Una **fracción** $\\frac{a}{b}$ (con $b\\neq 0$) representa $a$ partes de un total de $b$ partes iguales. Si $a<b$ se llama propia y si $a\\ge b$, impropia.",
+        "**Equivalencia:** multiplicar o dividir numerador y denominador por un mismo número distinto de cero no cambia el valor. Por ejemplo, $\\frac{2}{3}=\\frac{4}{6}$.",
+        "**Suma y resta:** si los denominadores son iguales se operan los numeradores. Si son distintos, se amplifica hasta un denominador común (conviene el MCM).",
+        "**Multiplicación:** se multiplican numeradores entre sí y denominadores entre sí. **División:** se multiplica por el inverso de la segunda fracción.",
+        "**De fracción a decimal:** se divide el numerador por el denominador, así $\\frac{3}{4}=0{,}75$. **De decimal a fracción:** $0{,}125=\\frac{125}{1000}=\\frac{1}{8}$."
+      ],
+      "formulas": [
+        {
+          "name": "Suma",
+          "latex": "\\frac{a}{b}+\\frac{c}{d}=\\frac{ad+bc}{bd}"
+        },
+        {
+          "name": "Resta",
+          "latex": "\\frac{a}{b}-\\frac{c}{d}=\\frac{ad-bc}{bd}"
+        },
+        {
+          "name": "Multiplicación",
+          "latex": "\\frac{a}{b}\\cdot\\frac{c}{d}=\\frac{ac}{bd}"
+        },
+        {
+          "name": "División",
+          "latex": "\\frac{a}{b}\\div\\frac{c}{d}=\\frac{a}{b}\\cdot\\frac{d}{c}=\\frac{ad}{bc}",
+          "note": "Con $b,c,d\\neq 0$."
+        },
+        {
+          "name": "Decimal periódico",
+          "latex": "0{,}\\overline{3}=\\frac{3}{9}=\\frac{1}{3}"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Calcula $\\frac{2}{3}+\\frac{5}{6}$.",
+          "solution": "El MCM de 3 y 6 es 6. Entonces $\\frac{2}{3}=\\frac{4}{6}$ y $$\\frac{4}{6}+\\frac{5}{6}=\\frac{9}{6}=\\frac{3}{2}.$$"
+        }
+      ],
+      "commonMistakes": [
+        "Sumar numeradores y denominadores por separado: $\\frac{1}{2}+\\frac{1}{3}\\neq\\frac{2}{5}$. El resultado correcto es $\\frac{5}{6}$.",
+        "Dividir fracciones sin invertir la segunda fracción."
+      ],
+      "questions": [
+        {
+          "id": "num-frac-001",
+          "statement": "¿Cuál es el resultado de $\\frac{3}{4}+\\frac{5}{8}$?",
+          "options": [
+            "$\\frac{8}{12}$",
+            "$\\frac{15}{32}$",
+            "$\\frac{11}{8}$",
+            "$\\frac{11}{16}$"
+          ],
+          "correctIndex": 2,
+          "explanation": "El MCM de 4 y 8 es 8: $\\frac{3}{4}=\\frac{6}{8}$, luego $\\frac{6}{8}+\\frac{5}{8}=\\frac{11}{8}$. Sumar numeradores y denominadores ($\\frac{8}{12}$) es un error típico.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "num-frac-002",
+          "statement": "Calcula $\\frac{2}{5}\\div\\frac{4}{15}$.",
+          "options": [
+            "$\\frac{8}{75}$",
+            "$\\frac{3}{2}$",
+            "$\\frac{2}{3}$",
+            "$\\frac{6}{5}$"
+          ],
+          "correctIndex": 1,
+          "explanation": "Se multiplica por el inverso: $\\frac{2}{5}\\cdot\\frac{15}{4}=\\frac{30}{20}=\\frac{3}{2}$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "num-frac-003",
+          "statement": "¿Cuál de las siguientes fracciones es la mayor?",
+          "options": [
+            "$\\frac{3}{5}$",
+            "$\\frac{5}{8}$",
+            "$\\frac{7}{12}$",
+            "$\\frac{2}{3}$"
+          ],
+          "correctIndex": 3,
+          "explanation": "En decimales: $\\frac{3}{5}=0{,}6$; $\\frac{5}{8}=0{,}625$; $\\frac{7}{12}\\approx0{,}583$; $\\frac{2}{3}\\approx0{,}667$. La mayor es $\\frac{2}{3}$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "num-frac-004",
+          "statement": "¿Qué número decimal es equivalente a $\\frac{7}{20}$?",
+          "options": [
+            "$0{,}7$",
+            "$0{,}27$",
+            "$0{,}35$",
+            "$3{,}5$"
+          ],
+          "correctIndex": 2,
+          "explanation": "Amplificando por 5: $\\frac{7}{20}=\\frac{35}{100}=0{,}35$.",
+          "difficulty": "BASICO"
+        }
+      ]
+    },
+    {
+      "id": "num-porcentaje",
+      "order": 2,
+      "module": "M1",
+      "title": "Porcentaje",
+      "summary": "Porcentaje de una cantidad, aumentos, descuentos y variaciones.",
+      "lesson": [
+        "El **porcentaje** expresa una razón sobre 100: $p\\%=\\frac{p}{100}$.",
+        "Para calcular el $p\\%$ de una cantidad $C$ se multiplica: $C\\cdot\\frac{p}{100}$.",
+        "Un **aumento** de $p\\%$ equivale a multiplicar por $1+\\frac{p}{100}$. Un **descuento** de $p\\%$ equivale a multiplicar por $1-\\frac{p}{100}$.",
+        "Los porcentajes sucesivos **no se suman**: se multiplican los factores correspondientes.",
+        "La **variación porcentual** compara el cambio con el valor inicial."
+      ],
+      "formulas": [
+        {
+          "name": "Porcentaje de una cantidad",
+          "latex": "P=\\frac{p}{100}\\cdot C"
+        },
+        {
+          "name": "Aumento porcentual",
+          "latex": "C_f=C\\left(1+\\frac{p}{100}\\right)"
+        },
+        {
+          "name": "Descuento porcentual",
+          "latex": "C_f=C\\left(1-\\frac{p}{100}\\right)"
+        },
+        {
+          "name": "Variación porcentual",
+          "latex": "\\Delta\\%=\\frac{V_f-V_i}{V_i}\\cdot 100"
+        },
+        {
+          "name": "Interés simple",
+          "latex": "I=C\\cdot\\frac{r}{100}\\cdot t"
+        },
+        {
+          "name": "Interés compuesto",
+          "latex": "C_f=C\\left(1+\\frac{r}{100}\\right)^{t}"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Un producto cuesta 25.000 pesos. Se le aplica un descuento de 20 % y, sobre el precio rebajado, otro de 10 %. ¿Cuál es el precio final?",
+          "solution": "Se multiplican los factores: $$25.000\\cdot0{,}8\\cdot0{,}9=18.000.$$ El precio final es 18.000 pesos, que equivale a un descuento total de 28 % (no de 30 %)."
+        }
+      ],
+      "commonMistakes": [
+        "Sumar porcentajes sucesivos: dos descuentos de 20 % y 10 % no equivalen a uno de 30 %.",
+        "Calcular la variación porcentual dividiendo por el valor final en lugar del inicial."
+      ],
+      "questions": [
+        {
+          "id": "num-porc-001",
+          "statement": "¿Cuánto es el 35 % de 240?",
+          "options": [
+            "72",
+            "84",
+            "96",
+            "105"
+          ],
+          "correctIndex": 1,
+          "explanation": "$240\\cdot\\frac{35}{100}=240\\cdot0{,}35=84$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "num-porc-002",
+          "statement": "El arriendo mensual de un departamento es de 300.000 pesos y sube un 15 %. ¿Cuál es el nuevo arriendo?",
+          "options": [
+            "315.000 pesos",
+            "335.000 pesos",
+            "345.000 pesos",
+            "450.000 pesos"
+          ],
+          "correctIndex": 2,
+          "explanation": "$300.000\\cdot1{,}15=345.000$ pesos.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "num-porc-003",
+          "statement": "A un producto se le aplica un descuento de 20 % y, sobre el precio rebajado, otro de 10 %. ¿Qué descuento total equivale a ambos?",
+          "options": [
+            "30 %",
+            "28 %",
+            "72 %",
+            "25 %"
+          ],
+          "correctIndex": 1,
+          "explanation": "El factor total es $0{,}8\\cdot0{,}9=0{,}72$, es decir, se paga el 72 % del precio. El descuento total es $100\\%-72\\%=28\\%$.",
+          "difficulty": "INTERMEDIO"
+        },
+        {
+          "id": "num-porc-004",
+          "statement": "El número de estudiantes de un curso pasó de 80 a 100. ¿Cuál fue el porcentaje de aumento?",
+          "options": [
+            "20 %",
+            "25 %",
+            "80 %",
+            "125 %"
+          ],
+          "correctIndex": 1,
+          "explanation": "$\\Delta\\%=\\frac{100-80}{80}\\cdot100=\\frac{20}{80}\\cdot100=25\\%$. Se divide por el valor inicial.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    },
+    {
+      "id": "num-potencias",
+      "order": 3,
+      "module": "M1",
+      "title": "Potencias y raíces",
+      "summary": "Propiedades de potencias, raíces y notación científica.",
+      "lesson": [
+        "Una **potencia** $a^n$ (con $n$ entero positivo) es $a$ multiplicado $n$ veces por sí mismo. Además, $a^0=1$ y $a^{-n}=\\frac{1}{a^n}$ para $a\\neq0$.",
+        "La **raíz enésima** se relaciona con las potencias de exponente fraccionario: $\\sqrt[n]{a}=a^{\\frac{1}{n}}$. Si $n$ es par, se exige $a\\ge0$.",
+        "La **notación científica** escribe un número como $a\\cdot10^{k}$, con $1\\le a<10$ y $k$ entero. Por ejemplo, $45.000=4{,}5\\cdot10^{4}$."
+      ],
+      "formulas": [
+        {
+          "name": "Producto de potencias de igual base",
+          "latex": "a^m\\cdot a^n=a^{m+n}"
+        },
+        {
+          "name": "Cociente de potencias de igual base",
+          "latex": "\\frac{a^m}{a^n}=a^{m-n}"
+        },
+        {
+          "name": "Potencia de una potencia",
+          "latex": "(a^m)^n=a^{mn}"
+        },
+        {
+          "name": "Potencia de un producto",
+          "latex": "(ab)^n=a^n\\,b^n"
+        },
+        {
+          "name": "Potencia de un cociente",
+          "latex": "\\left(\\frac{a}{b}\\right)^n=\\frac{a^n}{b^n}"
+        },
+        {
+          "name": "Exponente negativo",
+          "latex": "a^{-n}=\\frac{1}{a^n}"
+        },
+        {
+          "name": "Raíz como potencia",
+          "latex": "\\sqrt[n]{a^m}=a^{\\frac{m}{n}}"
+        },
+        {
+          "name": "Raíz de un producto",
+          "latex": "\\sqrt{ab}=\\sqrt{a}\\cdot\\sqrt{b}",
+          "note": "Con $a,b\\ge0$."
+        },
+        {
+          "name": "Raíz de un cuadrado",
+          "latex": "\\sqrt{a^2}=|a|"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "Simplifica $\\dfrac{2^5\\cdot2^{-2}}{2^4}$.",
+          "solution": "Se suman y restan los exponentes: $$2^{5+(-2)-4}=2^{-1}=\\frac{1}{2}.$$"
+        }
+      ],
+      "commonMistakes": [
+        "Multiplicar las bases al multiplicar potencias: $2^3\\cdot2^2=2^5$, no $4^5$.",
+        "Creer que $(a+b)^2=a^2+b^2$. El desarrollo correcto es $a^2+2ab+b^2$."
+      ],
+      "questions": [
+        {
+          "id": "num-pot-001",
+          "statement": "¿Cuál es el valor de $\\dfrac{3^5\\cdot3^2}{3^4}$?",
+          "options": [
+            "9",
+            "27",
+            "81",
+            "243"
+          ],
+          "correctIndex": 1,
+          "explanation": "$3^{5+2-4}=3^{3}=27$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "num-pot-002",
+          "statement": "¿Cuál es el valor de $2^{-3}$?",
+          "options": [
+            "$-8$",
+            "$-\\frac{1}{8}$",
+            "$\\frac{1}{8}$",
+            "$\\frac{1}{6}$"
+          ],
+          "correctIndex": 2,
+          "explanation": "$2^{-3}=\\frac{1}{2^3}=\\frac{1}{8}$.",
+          "difficulty": "BASICO"
+        },
+        {
+          "id": "num-pot-003",
+          "statement": "Al simplificar $\\sqrt{50}$ se obtiene:",
+          "options": [
+            "$5\\sqrt{2}$",
+            "$2\\sqrt{5}$",
+            "$25\\sqrt{2}$",
+            "$10\\sqrt{5}$"
+          ],
+          "correctIndex": 0,
+          "explanation": "$\\sqrt{50}=\\sqrt{25\\cdot2}=\\sqrt{25}\\cdot\\sqrt{2}=5\\sqrt{2}$.",
+          "difficulty": "INTERMEDIO"
+        },
+        {
+          "id": "num-pot-004",
+          "statement": "El número $0{,}00032$ escrito en notación científica es:",
+          "options": [
+            "$3{,}2\\cdot10^{-3}$",
+            "$3{,}2\\cdot10^{4}$",
+            "$32\\cdot10^{-5}$",
+            "$3{,}2\\cdot10^{-4}$"
+          ],
+          "correctIndex": 3,
+          "explanation": "Se corre la coma 4 lugares a la derecha para obtener $3{,}2$, por lo que el exponente es $-4$. La opción $32\\cdot10^{-5}$ vale lo mismo, pero no está en notación científica porque $32\\ge10$.",
+          "difficulty": "INTERMEDIO"
+        }
+      ]
+    }
+  ]
+}
